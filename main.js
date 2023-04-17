@@ -1,3 +1,11 @@
+//VARIABLES
+let porcentajeTNA = 0.65;
+
+// FUNCION
+function porcentaje(importeCustom, porcentajeTNA) {
+  return importeCustom * porcentajeTNA;
+}
+
 let Bienvenida = prompt(
   "Hola, Bienvenido a BANCO HYGGE donde su dinero crypto va a crecer exponencialmente \n Cuanto dinero usted quiere empezar a stackear? \n 1 - 10.000  \n 2 - 50.000 \n 3 - 100.000 \n 4 - Deseo stackear otro importe \n 0- Salir "
 );
@@ -43,13 +51,12 @@ if (Bienvenida !== "0") {
         prompt("Por favor indique su Importe a stackear")
       );
       alert(
-        " Considerando el TNA actual de 65% su ganancia seria de:" +
-          " " +
-          "$" +
-          importeCustom * 0.65
+        "Considerando el TNA actual de 65% su ganancia seria de: $" +
+          porcentaje(importeCustom, porcentajeTNA)
       );
       let usuarioCustom = prompt("Por favor indique su Nombre");
       let mailUsuarioCustom = prompt("Por favor ingrese su Mail");
+
       alert("En minutos recibirá todos los detalles en: " + mailUsuarioCustom);
       console.log(
         "El usuario es " + usuarioCustom + " y su mail es " + mailUsuarioCustom
